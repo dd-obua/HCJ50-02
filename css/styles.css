@@ -37,6 +37,18 @@ body {
   position: relative;
 }
 
+.progress__container::after {
+  content: '';
+  background: #e0e0e0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 0.4rem;
+  width: 100%;
+  z-index: -2;
+}
+
 .progress {
   background: #3498db;
   position: absolute;
