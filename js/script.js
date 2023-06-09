@@ -14,4 +14,6 @@ const updateDisplay = function () {
   });
 };
 
-btnNext.closest('.container').addEventListener('click', function (event) {});
+btnNext.closest('.container').addEventListener('click', function (event) {
+  const clicked = event.target;
+});
