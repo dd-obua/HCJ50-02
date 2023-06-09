@@ -73,6 +73,20 @@ body {
   padding: 1.5rem;
 }
 
-.circle--1 {
+.circle--active {
   border: 3px solid #3498db;
+}
+
+.btn {
+  border: none;
+  padding: 0.8rem 3rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #fff;
+  background: #e0e0e0;
+}
+
+.btn--active {
+  background: #3498db;
 }
