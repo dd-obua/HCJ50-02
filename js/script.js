@@ -16,4 +16,10 @@ const updateDisplay = function () {
 
 btnNext.closest('.container').addEventListener('click', function (event) {
   const clicked = event.target;
+
+  if (clicked.classList.contains('btn__next')) {
+    curActive++;
+    if (curActive > circles.length) curActive = circles.length;
+    updateDisplay();
+  }
 });
