@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  --line-border-empty: #e0e0e0;
+  --line-border-fill: #3498db;
+}
 
 * {
   margin: 0;
@@ -39,7 +43,7 @@ body {
 
 .progress__container::after {
   content: '';
-  background: #e0e0e0;
+  background: var(--line-border-empty);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -50,7 +54,7 @@ body {
 }
 
 .progress {
-  background: #3498db;
+  background: var(--line-border-fill);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -66,15 +70,16 @@ body {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
-  border: 3px solid #e0e0e0;
+  border: 3px solid var(--line-border-empty);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
+  transition: 0.4s ease;
 }
 
-.circle--active {
-  border: 3px solid #3498db;
+.circle.circle--active {
+  border: 3px solid var(--line-border-fill);
 }
 
 .btn {
@@ -84,14 +89,28 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   color: #fff;
-  background: #e0e0e0;
-  border-radius: 0.8rem;
+  background: var(--line-border-fill);
+  border-radius: 0.6rem;
+  cursor: pointer;
 }
 
-.btn--active {
-  background: #3498db;
+.btn.btn--active {
+  background: var(--line-border-fill);
 }
 
 .btn:not(:last-child) {
   margin-right: 1rem;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:disabled {
+  background: var(--line-border-empty);
+  cursor: not-allowed;
 }
