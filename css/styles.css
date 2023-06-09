@@ -21,3 +21,7 @@ body {
   overflow: hidden;
   background: #f6f7fb;
 }
+
+.container {
+  text-align: center;
+}
