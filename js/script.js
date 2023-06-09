@@ -13,3 +13,5 @@ const updateDisplay = function () {
     else circle.classList.remove('circle--active');
   });
 };
+
+btnNext.closest('.container').addEventListener('click', function (event) {});
